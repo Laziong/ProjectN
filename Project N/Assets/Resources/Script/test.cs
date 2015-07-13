@@ -4,7 +4,6 @@ using System.Collections;
 public class test : MonoBehaviour {
 	
 	bool select;
-	RaycastHit hit;
 	Ray ray;
 	Renderer rend;
 	Color wnColor = Color.white;
@@ -20,9 +19,8 @@ public class test : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update (){
-		int wp = TurnManager.whitepoint;
 			if (Input.GetMouseButtonDown (0)) {
-				if (wp == 1) {
+				if (TurnManager.whitepoint == 1) {
 					ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 					RaycastHit hit = new RaycastHit ();
 
@@ -66,21 +64,28 @@ public class test : MonoBehaviour {
 								select = false;
 								rend.material.color = wnColor;
 								//行動ポイントの消費
-								TurnManager.whitepoint -= 1;
+							TurnManager.whitepoint = 0;
+							TurnManager.once = false;
+								
+							Debug.Log(TurnManager.once);
+							Debug.Log(TurnManager.whitepoint);
+
 							}
-						}
-						//破壊移動
-						if (gameObject.tag == "bkoma") {
-							//選択状態かつtag"bkoma"なら移動後接触対象を破壊
+						//選択状態かつtag"bkoma"なら移動後接触対象を破壊
+						if (select && hit.collider.gameObject.tag == "bkoma") {
 							NavMeshAgent agentenemy = GetComponent<NavMeshAgent> ();
 							agentenemy.SetDestination (hit.point);
 							//非選択状態
 							select = false;
 							rend.material.color = wnColor;
 							//行動ポイントの消費
-							TurnManager.whitepoint -= 1;
+							TurnManager.whitepoint = 0;
+							TurnManager.once = false;
 						}
+					}
 						}
+						//破壊移動
+
 					}
 					}
 				}

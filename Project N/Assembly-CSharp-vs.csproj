@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Resources\Script\Edestroy.cs" />
+     <Compile Include="Assets\Resources\Script\Edestroy2.cs" />
      <Compile Include="Assets\Resources\Script\TurnManager.cs" />
      <Compile Include="Assets\Resources\Script\blackkoma.cs" />
      <Compile Include="Assets\Resources\Script\blackmove\AssasinB.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Resources\Script\blackmove\QueenB.cs" />
      <Compile Include="Assets\Resources\Script\blackmove\RookB.cs" />
      <Compile Include="Assets\Resources\Script\test.cs" />
+     <Compile Include="Assets\Resources\Script\test2.cs" />
      <Compile Include="Assets\Resources\Script\whitekoma.cs" />
      <Compile Include="Assets\Resources\Script\whitemove\AssasinW.cs" />
      <Compile Include="Assets\Resources\Script\whitemove\BishopW.cs" />
