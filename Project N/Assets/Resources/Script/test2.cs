@@ -83,8 +83,6 @@ public class test2 : MonoBehaviour {
 						}
 					}
 				}
-				//破壊移動
-				
 			}
 		}
 	}

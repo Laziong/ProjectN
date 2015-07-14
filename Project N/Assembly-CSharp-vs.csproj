@@ -55,7 +55,7 @@
      <Compile Include="Assets\Resources\Script\blackmove\KingB.cs" />
      <Compile Include="Assets\Resources\Script\blackmove\PawnB.cs" />
      <Compile Include="Assets\Resources\Script\blackmove\QueenB.cs" />
-     <Compile Include="Assets\Resources\Script\blackmove\RookB.cs" />
+     <Compile Include="Assets\Resources\Script\blackmove\RookBlack.cs" />
      <Compile Include="Assets\Resources\Script\test.cs" />
      <Compile Include="Assets\Resources\Script\test2.cs" />
      <Compile Include="Assets\Resources\Script\whitekoma.cs" />
@@ -64,7 +64,7 @@
      <Compile Include="Assets\Resources\Script\whitemove\KingW.cs" />
      <Compile Include="Assets\Resources\Script\whitemove\PawnW.cs" />
      <Compile Include="Assets\Resources\Script\whitemove\QueenW.cs" />
-     <Compile Include="Assets\Resources\Script\whitemove\RookW.cs" />
+     <Compile Include="Assets\Resources\Script\whitemove\RookWhite.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

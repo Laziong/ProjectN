@@ -71,22 +71,20 @@ public class test : MonoBehaviour {
 							Debug.Log(TurnManager.whitepoint);
 
 							}
-						//選択状態かつtag"bkoma"なら移動後接触対象を破壊
-						if (select && hit.collider.gameObject.tag == "bkoma") {
-							NavMeshAgent agentenemy = GetComponent<NavMeshAgent> ();
-							agentenemy.SetDestination (hit.point);
-							//非選択状態
-							select = false;
-							rend.material.color = wnColor;
-							//行動ポイントの消費
+							//選択状態かつtag"bkoma"なら移動後接触対象を破壊
+							if (select && hit.collider.gameObject.tag == "bkoma") {
+								NavMeshAgent agentenemy = GetComponent<NavMeshAgent> ();
+								agentenemy.SetDestination (hit.point);
+								//非選択状態
+								select = false;
+								rend.material.color = wnColor;
+								//行動ポイントの消費
 							TurnManager.whitepoint = 0;
 							TurnManager.once = false;
-						}
+							}
 					}
 						}
-						//破壊移動
-
-					}
+						}
 					}
 				}
 			}
