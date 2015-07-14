@@ -1,10 +1,26 @@
 fileFormatVersion: 2
 guid: 685b985a2309837429c8fea7a2d29a2f
-timeCreated: 1436597163
+timeCreated: 1436889859
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - WhiteKing: {instanceID: 0}
+  - WhiteQueen: {instanceID: 0}
+  - WhiteBishop: {instanceID: 0}
+  - WhiteAssasin: {instanceID: 0}
+  - WhiteRook: {instanceID: 0}
+  - WhitePawn: {instanceID: 0}
+  - BlackKing: {instanceID: 0}
+  - BlackQueen: {instanceID: 0}
+  - BlackBishop: {instanceID: 0}
+  - BlackAssasin: {instanceID: 0}
+  - BlackRook: {instanceID: 0}
+  - BlackPawn: {instanceID: 0}
+  - WhiteTest: {instanceID: 0}
+  - BlackTest: {instanceID: 0}
+  - test_script: {instanceID: 0}
+  - test2_script: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
