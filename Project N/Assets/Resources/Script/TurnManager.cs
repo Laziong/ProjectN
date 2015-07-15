@@ -31,10 +31,10 @@ public class TurnManager : MonoBehaviour {
 	public RookBlack BRook_script;
 
 	//テスト用
-	//public GameObject WhiteTest;
-	//public GameObject BlackTest;
-	//public test test_script;
-	//public test2 test2_script;
+	/*public GameObject WhiteTest;
+	public GameObject BlackTest;
+	public test test_script;
+	public test2 test2_script;*/
 
 
 	// Use this for initialization
@@ -47,10 +47,10 @@ public class TurnManager : MonoBehaviour {
 
 
 
-		/*test_script = WhiteTest.GetComponent<test> ();
-		test2_script = BlackTest.GetComponent<test2> ();
-		test_script.enabled = true;
-		test2_script.enabled = true;*/
+		//test_script = WhiteTest.GetComponent<test> ();
+		//test2_script = BlackTest.GetComponent<test2> ();
+		//test_script.enabled = true;
+		//test2_script.enabled = true;
 
 		Debug.Log (once);
 		Debug.Log (whitepoint);
@@ -75,7 +75,7 @@ public class TurnManager : MonoBehaviour {
 			Debug.Log ("OK2");
 		}*/
 		//本番用
-		if (once == true && twice == true) {
+		/*if (once == true && twice == true) {
 			WRook_script.enabled = true;
 
 			BRook_script.enabled = false;
@@ -86,7 +86,7 @@ public class TurnManager : MonoBehaviour {
 
 			BRook_script.enabled = true;
 			twice = true;;
-		}
+		}*/
 
 		//両方０なら行動ポイント１に回復
 	if (blackpoint == 0 && whitepoint == 0) {
