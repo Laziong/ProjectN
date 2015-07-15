@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Script/blackmove/KingBlack.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Script\Edestroy2.cs">
     <Files>
-      <File FileName="Assets/Resources/Script/blackmove/AssasinBlack.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Script/blackmove/BishopBlack.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Script/blackmove/KingBlack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Script\TurnManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Script\blackmove\RookBlack.cs" Line="85" Column="6" />
+      <File FileName="Assets\Resources\Script\Edestroy2.cs" Line="4" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
