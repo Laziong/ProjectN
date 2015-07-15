@@ -1,24 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Script/whitemove/QueenWhite.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Script/blackmove/KingBlack.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets/Resources/Script/TurnManager.cs" Line="29" Column="32" />
-      <File FileName="Assets/Resources/Script/test.cs" Line="15" Column="31" />
-      <File FileName="Assets/Resources/Script/whitemove/AssasinWhite.cs" Line="4" Column="26" />
-      <File FileName="Assets/Resources/Script/whitemove/BishopWhite.cs" Line="4" Column="25" />
-      <File FileName="Assets/Resources/Script/whitemove/KingWhite.cs" Line="4" Column="23" />
-      <File FileName="Assets/Resources/Script/whitemove/PawnWhite.cs" Line="4" Column="23" />
-      <File FileName="Assets/Resources/Script/whitemove/QueenWhite.cs" Line="4" Column="24" />
-=======
-      <File FileName="Assets\Resources\Script\test.cs" Line="59" Column="35" />
-      <File FileName="Assets\Resources\Script\TurnManager.cs" Line="29" Column="31" />
-      <File FileName="Assets\Resources\Script\test2.cs" Line="21" Column="17" />
-      <File FileName="Assets\Resources\Script\Edestroy2.cs" Line="20" Column="1" />
-      <File FileName="Assets\Resources\Script\Edestroy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Script\whitemove\RookWhite.cs" Line="11" Column="36" />
-      <File FileName="Assets\Resources\Script\blackmove\RookBlack.cs" Line="12" Column="31" />
->>>>>>> 26b074e57f067f5fa24aed3a6d76367bb748cc7b
+      <File FileName="Assets/Resources/Script/blackmove/AssasinBlack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Script/blackmove/BishopBlack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Script/blackmove/KingBlack.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -31,17 +31,15 @@ public class TurnManager : MonoBehaviour {
 	public RookBlack BRook_script;
 
 	//テスト用
-<<<<<<< HEAD
 	/*public GameObject WhiteTest;
 	public GameObject BlackTest;
 	public test test_script;
 	public test2 test2_script;*/
-=======
+
 	//public GameObject WhiteTest;
 	//public GameObject BlackTest;
 	//public test test_script;
 	//public test2 test2_script;
->>>>>>> 26b074e57f067f5fa24aed3a6d76367bb748cc7b
 
 
 	// Use this for initialization
@@ -54,17 +52,15 @@ public class TurnManager : MonoBehaviour {
 
 
 
-<<<<<<< HEAD
 		//test_script = WhiteTest.GetComponent<test> ();
 		//test2_script = BlackTest.GetComponent<test2> ();
 		//test_script.enabled = true;
 		//test2_script.enabled = true;
-=======
+
 		/*test_script = WhiteTest.GetComponent<test> ();
 		test2_script = BlackTest.GetComponent<test2> ();
 		test_script.enabled = true;
 		test2_script.enabled = true;*/
->>>>>>> 26b074e57f067f5fa24aed3a6d76367bb748cc7b
 
 		Debug.Log (once);
 		Debug.Log (whitepoint);
@@ -89,33 +85,18 @@ public class TurnManager : MonoBehaviour {
 			Debug.Log ("OK2");
 		}*/
 		//本番用
-<<<<<<< HEAD
-		/*if (once == true && twice == true) {
-=======
 		if (once == true && twice == true) {
->>>>>>> 26b074e57f067f5fa24aed3a6d76367bb748cc7b
 			WRook_script.enabled = true;
 
 			BRook_script.enabled = false;
 			twice = false;
-<<<<<<< HEAD
 		}
-		if (once == false && twice == false) {
+		if(once == false && twice == false){
 			WRook_script.enabled = false;
 
-			BRook_script.enabled = true;
-			twice = true;;
-		}*/
-=======
+			BRook_script.enabled =  true;
+			twice = true;
 		}
-		if (once == false && twice == false) {
-			WRook_script.enabled = false;
-
-			BRook_script.enabled = true;
-			twice = true;;
-		}
->>>>>>> 26b074e57f067f5fa24aed3a6d76367bb748cc7b
-
 		//両方０なら行動ポイント１に回復
 	if (blackpoint == 0 && whitepoint == 0) {
 			blackpoint = 1;
