@@ -6,10 +6,15 @@ public class TurnManager : MonoBehaviour {
 	//行動ポイント
 	public static int blackpoint;
 	public static int whitepoint;
+
+	//選択管理
+	public static bool Allselect;
+
 	//経過ターン
 	public static int turn;
 	public static bool once;
 	public bool twice;
+
 	//コマ管理
 	public GameObject WhiteKing;
 	public GameObject WhiteQueen;
@@ -26,9 +31,19 @@ public class TurnManager : MonoBehaviour {
 	public GameObject BlackPawn;
 
 	//コマスクリプト取得用
+	//キング
+	//クイーン
+	//ビショップ
+	//アサシン
+	//ルーク
 	public RookWhite WRook_script;
+	public RookWhite WRook2_script;
+	public RookWhite WRook3_script;
 
 	public RookBlack BRook_script;
+	public RookBlack BRook2_script;
+
+	//ポーン
 
 	//テスト用
 	/*public GameObject WhiteTest;
@@ -49,6 +64,7 @@ public class TurnManager : MonoBehaviour {
 		turn = 1;//開始ターン
 		once = true;
 		twice = true;
+		Allselect = false;
 
 
 
@@ -84,6 +100,7 @@ public class TurnManager : MonoBehaviour {
 			twice = true;
 			Debug.Log ("OK2");
 		}*/
+
 		//本番用
 		if (once == true && twice == true) {
 			WRook_script.enabled = true;
@@ -97,6 +114,7 @@ public class TurnManager : MonoBehaviour {
 			BRook_script.enabled =  true;
 			twice = true;
 		}
+
 		//両方０なら行動ポイント１に回復
 	if (blackpoint == 0 && whitepoint == 0) {
 			blackpoint = 1;
