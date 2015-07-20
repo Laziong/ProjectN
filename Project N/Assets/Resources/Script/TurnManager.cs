@@ -6,10 +6,15 @@ public class TurnManager : MonoBehaviour {
 	//行動ポイント
 	public static int blackpoint;
 	public static int whitepoint;
+
+	//選択管理
+	public static bool Allselect;
+
 	//経過ターン
 	public static int turn;
 	public static bool once;
 	public bool twice;
+
 	//コマ管理
 	public GameObject WhiteKing;
 	public GameObject WhiteQueen;
@@ -26,9 +31,17 @@ public class TurnManager : MonoBehaviour {
 	public GameObject BlackPawn;
 
 	//コマスクリプト取得用
-	public RookWhite WRook_script;
+	//キング
+	//クイーン
+	//ビショップ
+	//アサシン
+	//ルーク
+	public RookWhite WRook1_script;
+	public RookWhite WRook2_script;
+	public RookBlack BRook1_script;
+	public RookBlack BRook2_script;
 
-	public RookBlack BRook_script;
+	//ポーン
 
 	//テスト用
 	/*public GameObject WhiteTest;
@@ -49,8 +62,7 @@ public class TurnManager : MonoBehaviour {
 		turn = 1;//開始ターン
 		once = true;
 		twice = true;
-
-
+		Allselect = false;
 
 
 
@@ -64,10 +76,6 @@ public class TurnManager : MonoBehaviour {
 		test_script.enabled = true;
 		test2_script.enabled = true;*/
 
-		Debug.Log (once);
-		Debug.Log (whitepoint);
-		Debug.Log (blackpoint);
-		Debug.Log (twice);
 	}
 	
 	// Update is called once per frame
@@ -86,26 +94,32 @@ public class TurnManager : MonoBehaviour {
 			twice = true;
 			Debug.Log ("OK2");
 		}*/
+
 		//本番用
 		if (once == true && twice == true) {
-			WRook_script.enabled = true;
+			WRook1_script.enabled = true;
+			WRook2_script.enabled = true;
 
-			BRook_script.enabled = false;
+			BRook1_script.enabled = false;
+			BRook2_script.enabled = false;
+
 			twice = false;
 		}
 		if(once == false && twice == false){
-			WRook_script.enabled = false;
+			WRook1_script.enabled = false;
+			WRook2_script.enabled = false;
 
-			BRook_script.enabled =  true;
+			BRook1_script.enabled = true;
+			BRook2_script.enabled = true;
+
 			twice = true;
 		}
+
 		//両方０なら行動ポイント１に回復
 	if (blackpoint == 0 && whitepoint == 0) {
 			blackpoint = 1;
 			whitepoint = 1;
 			turn++;
-			Debug.Log (whitepoint);
-			Debug.Log (blackpoint);
 		}
 	}
 }
