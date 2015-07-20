@@ -12,7 +12,7 @@ public class Edestroy2 : MonoBehaviour {
 	// Update is called once per frame
 	//移動範囲削除
 	void Update () {
-		if (TurnManager.blackpoint == 0 || TurnManager.Allselect == false) {
+		if (TurnManager.blackpoint == 0 ) {
 			Destroy (this.gameObject);
 		}
 	}
