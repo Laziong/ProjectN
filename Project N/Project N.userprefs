@@ -2,11 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Main\Resources\Script\MainCamera.cs">
     <Files>
-      <File FileName="Assets\Main\Resources\Script\TurnManager.cs" Line="111" Column="3" />
-      <File FileName="Assets\Main\Resources\Script\blackmove\RookBlack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Main\Resources\Script\blackmove\PawnBlack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Main\Resources\Script\whitemove\PawnWhite.cs" Line="1" Column="1" />
-      <File FileName="Assets\Main\Resources\Script\MainCamera.cs" Line="57" Column="3" />
+      <File FileName="Assets\Main\Resources\Script\MainCamera.cs" Line="138" Column="53" />
+      <File FileName="Assets\Main\Resources\Script\SelectSystem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Main\Resources\Script\AbilityWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Main\Resources\Script\KnightSystem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Main\Resources\Script\ID\TestQueenID.cs" Line="1" Column="1" />
+      <File FileName="Assets\Main\Resources\Script\ID\AbilityDateBase.cs" Line="15" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
