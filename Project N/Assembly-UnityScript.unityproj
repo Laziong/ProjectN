@@ -49,13 +49,12 @@
      <Compile Include="Assets\OtherAsset\Locomotion Setup\Scripts\SmoothFollow.js" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
-     <None Include="Assets\Main\Resources\Ability\test.txt" />
+     <None Include="Assets\Main\Resources\Ability\test\test.txt" />
      <None Include="Assets\OtherAsset\UnityChan\license.txt" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
-     <None Include="Assets\Main\Resources\Ability\Queen.txt" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Stage\Shader\AlphaMask.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />

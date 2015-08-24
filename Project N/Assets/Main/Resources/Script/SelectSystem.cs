@@ -7,6 +7,7 @@ public class SelectSystem : MonoBehaviour {
 
 	public RaycastHit hit;
 
+	//選択した駒
 	public GameObject hitobj;
 
 	public bool inselect;

@@ -46,12 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Main\Resources\Ability\Windowchange.cs" />
+     <Compile Include="Assets\Main\Resources\Ability\test\Ability.cs" />
      <Compile Include="Assets\Main\Resources\Script\AbilityWindow.cs" />
      <Compile Include="Assets\Main\Resources\Script\BlackTurn.cs" />
      <Compile Include="Assets\Main\Resources\Script\Edestroy.cs" />
      <Compile Include="Assets\Main\Resources\Script\Edestroy2.cs" />
-     <Compile Include="Assets\Main\Resources\Script\ID\AbilityDateBase.cs" />
-     <Compile Include="Assets\Main\Resources\Script\ID\TestQueenID.cs" />
      <Compile Include="Assets\Main\Resources\Script\KnightSystem.cs" />
      <Compile Include="Assets\Main\Resources\Script\MainCamera.cs" />
      <Compile Include="Assets\Main\Resources\Script\SelectSystem.cs" />
@@ -73,13 +73,12 @@
      <Compile Include="Assets\OtherAsset\Warrior Pack Bundle 1 Free\Code\WarriorAnimationDemo.cs" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
-     <None Include="Assets\Main\Resources\Ability\test.txt" />
+     <None Include="Assets\Main\Resources\Ability\test\test.txt" />
      <None Include="Assets\OtherAsset\UnityChan\license.txt" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
-     <None Include="Assets\Main\Resources\Ability\Queen.txt" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Stage\Shader\AlphaMask.shader" />
      <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
