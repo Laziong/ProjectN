@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_1_0;UNITY_5_1;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_LICENSE;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_EDITOR_METRICS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;UNITY_WEBPLAYER;ENABLE_SUBSTANCE;WEBPLUG;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_1_0;UNITY_5_1;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_LICENSE;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_EDITOR_METRICS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;UNITY_IPHONE;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;UNITY_IPHONE_API;UNITY_IOS;ENABLE_TEXTUREID_MAP;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;ENABLE_IL2CPP;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,45 +46,44 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Resources\Script\Edestroy.cs" />
-     <Compile Include="Assets\Resources\Script\Edestroy2.cs" />
-     <Compile Include="Assets\Resources\Script\TurnManager.cs" />
-     <Compile Include="Assets\Resources\Script\blackkoma.cs" />
-     <Compile Include="Assets\Resources\Script\blackmove\AssasinBlack.cs" />
-     <Compile Include="Assets\Resources\Script\blackmove\BishopBlack.cs" />
-     <Compile Include="Assets\Resources\Script\blackmove\KingBlack.cs" />
-     <Compile Include="Assets\Resources\Script\blackmove\PawnBlack.cs" />
-     <Compile Include="Assets\Resources\Script\blackmove\QueenBlack.cs" />
-     <Compile Include="Assets\Resources\Script\blackmove\RookBlack.cs" />
-     <Compile Include="Assets\Resources\Script\test.cs" />
-     <Compile Include="Assets\Resources\Script\test2.cs" />
-     <Compile Include="Assets\Resources\Script\whitekoma.cs" />
-     <Compile Include="Assets\Resources\Script\whitemove\AssasinWhite.cs" />
-     <Compile Include="Assets\Resources\Script\whitemove\BishopWhite.cs" />
-     <Compile Include="Assets\Resources\Script\whitemove\KingWhite.cs" />
-     <Compile Include="Assets\Resources\Script\whitemove\PawnWhite.cs" />
-     <Compile Include="Assets\Resources\Script\whitemove\QueenWhite.cs" />
-     <Compile Include="Assets\Resources\Script\whitemove\RookWhite.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\IdleChanger.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\SceneLoader.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\ThirdPersonCamera.cs" />
-     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
-     <Compile Include="Assets\Warrior Pack Bundle 1 Free\Code\SmoothFollow.cs" />
-     <Compile Include="Assets\Warrior Pack Bundle 1 Free\Code\WarriorAnimationDemo.cs" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
-     <None Include="Assets\UnityChan\license.txt" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
-     <None Include="Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
-     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
+     <Compile Include="Assets\Main\Resources\Ability\Windowchange.cs" />
+     <Compile Include="Assets\Main\Resources\Ability\test\Ability.cs" />
+     <Compile Include="Assets\Main\Resources\Script\AbilityWindow.cs" />
+     <Compile Include="Assets\Main\Resources\Script\BlackTurn.cs" />
+     <Compile Include="Assets\Main\Resources\Script\Edestroy.cs" />
+     <Compile Include="Assets\Main\Resources\Script\Edestroy2.cs" />
+     <Compile Include="Assets\Main\Resources\Script\KnightSystem.cs" />
+     <Compile Include="Assets\Main\Resources\Script\MainCamera.cs" />
+     <Compile Include="Assets\Main\Resources\Script\SelectSystem.cs" />
+     <Compile Include="Assets\Main\Resources\Script\TurnManager.cs" />
+     <Compile Include="Assets\Main\Resources\Script\WhiteTurn.cs" />
+     <Compile Include="Assets\Main\Resources\Script\moveColorB.cs" />
+     <Compile Include="Assets\Main\Resources\Script\moveColorW.cs" />
+     <Compile Include="Assets\Main\shinkou.cs" />
+     <Compile Include="Assets\OtherAsset\Locomotion Setup\Locomotion\Scripts\Locomotion.cs" />
+     <Compile Include="Assets\OtherAsset\Locomotion Setup\Scripts\JoystickToEvents.cs" />
+     <Compile Include="Assets\OtherAsset\Locomotion Setup\Scripts\LocomotionPlayer.cs" />
+     <Compile Include="Assets\OtherAsset\UnityChan\Scripts\CameraController.cs" />
+     <Compile Include="Assets\OtherAsset\UnityChan\Scripts\FaceUpdate.cs" />
+     <Compile Include="Assets\OtherAsset\UnityChan\Scripts\IdleChanger.cs" />
+     <Compile Include="Assets\OtherAsset\UnityChan\Scripts\SceneLoader.cs" />
+     <Compile Include="Assets\OtherAsset\UnityChan\Scripts\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\OtherAsset\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
+     <Compile Include="Assets\OtherAsset\Warrior Pack Bundle 1 Free\Code\SmoothFollow.cs" />
+     <Compile Include="Assets\OtherAsset\Warrior Pack Bundle 1 Free\Code\WarriorAnimationDemo.cs" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+     <None Include="Assets\Main\Resources\Ability\test\test.txt" />
+     <None Include="Assets\OtherAsset\UnityChan\license.txt" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Stage\Shader\AlphaMask.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+     <None Include="Assets\OtherAsset\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
