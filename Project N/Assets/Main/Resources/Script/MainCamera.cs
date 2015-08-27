@@ -27,12 +27,12 @@ public class MainCamera : MonoBehaviour {
 			count = 0.0f;
 			//白視点
 			if (change == false && TurnManager.once == true) {
-				this.transform.position = new Vector3 (-0.2f, 3.14f, 6.23f);
+				this.transform.position = new Vector3 (-0.3f, 3.14f, 6.9f);
 				this.transform.rotation = Quaternion.Euler (33f, 179f, 359f);
 			} else if
 			//黒視点
 				(change == false && TurnManager.once == false) {
-				this.transform.position = new Vector3 (0.17f, 3.43f, -6.01f);
+				this.transform.position = new Vector3 (0.17f, 3.43f, -6.9f);
 				this.transform.rotation = Quaternion.Euler (33f, -1.5f, -1.21f);
 			}
 		}
@@ -130,12 +130,12 @@ public class MainCamera : MonoBehaviour {
 	//対応ボタンクリックで見上げる視点
 	public void UpCamera(){
 		if (TurnManager.once == true) {
-			this.transform.position = new Vector3 (0.42f, 6.4f, 0.15f);
+			this.transform.position = new Vector3 (3.0f, 6.4f, 0.15f);
 			this.transform.rotation = Quaternion.Euler (90, 180, 0);
 			change = true;
 		} else if
 			(TurnManager.once == false) {
-			this.transform.position = new Vector3 (0.42f, 6.4f, 0.15f);
+			this.transform.position = new Vector3 (-3.0f, 6.4f, 0.15f);
 			this.transform.rotation = Quaternion.Euler (90, 0, 0);
 			change = true;
 		}

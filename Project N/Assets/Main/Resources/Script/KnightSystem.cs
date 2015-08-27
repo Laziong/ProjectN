@@ -8,8 +8,8 @@ public class KnightSystem : MonoBehaviour {
 	public GameObject SeSystem;//選択システム
  	public GameObject inobj;//自オブジェクト
 
-	public bool wturn;//ターン管理
-	public bool bturn;//同上
+	public bool belong_white;//ターン管理
+	public bool belong_black;//同上
 	public bool belong;//一回だけ所属決め
 
 	public GameObject hitpoint;
@@ -32,14 +32,14 @@ public class KnightSystem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	if (GetComponent<WhiteTurn> ().enabled == true && belong == true) {
-			wturn = true;
-			bturn = false;
+			belong_white = true;
+			belong_black = false;
 			belong = false;
 			Debug.Log("whiteOK");
 		}
 	if (GetComponent<BlackTurn> ().enabled == true && belong == true) {
-			wturn = false;
-			bturn = true;
+			belong_white = false;
+			belong_black = true;
 			belong = false;
 			Debug.Log("blackOK");
 		}
@@ -175,7 +175,7 @@ public class KnightSystem : MonoBehaviour {
 		int i = 0, a = 0, b = 0;
 		//縦1マス分移動範囲表示
 		while (i<2) {
-			if (wturn == true) {
+			if (belong_white == true) {
 				Vector3 posa = new Vector3 (posx, posy - 0.07f, posz - a);     //縦＋移動
 				Quaternion rote = new Quaternion (0.0f, 0.0f, 0.0f, 0.0f);
 				Instantiate (mv, posa, rote);//縦＋
@@ -184,7 +184,7 @@ public class KnightSystem : MonoBehaviour {
 				b++;//横マス
 				i++;//マス数
 			} else if
-				(bturn == true) {
+				(belong_black == true) {
 				Vector3 posa = new Vector3 (posx, posy - 0.07f, posz + a);
 			
 			Quaternion rote = new Quaternion (0.0f, 0.0f, 0.0f, 0.0f);
@@ -278,10 +278,10 @@ public class KnightSystem : MonoBehaviour {
 					//Debug.Log();
 					animator.SetFloat ("Speed", 5.0f);
 					//行動ポイントの消費
-					if(wturn == true){
+					if(belong_white == true){
 					Invoke("TurnEndWhite",2.0f);
 					}
-					if (bturn == true){
+					if (belong_black == true){
 					Invoke("TurnEndBlack",2.0f);
 					}
 
@@ -305,10 +305,12 @@ public class KnightSystem : MonoBehaviour {
 	void TurnEndWhite(){
 		GetComponent<WhiteTurn> ().twice = true;
 		TurnManager.once = false;
+		TurnManager.whitepoint = 0;
 	}
 	void TurnEndBlack(){
 		GetComponent<BlackTurn> ().twice = true;
 		TurnManager.once = true;
+		TurnManager.blackpoint = 0;
 	}
 	void DeadEndWhite(){
 	}

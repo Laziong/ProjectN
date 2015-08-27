@@ -16,4 +16,7 @@ public class Ability : MonoBehaviour {
 	void Update () {
 	
 	}
+	public void Ability_Active(){
+		this.gameObject.SetActive (false);
+	}
 }

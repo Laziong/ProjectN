@@ -6,9 +6,9 @@ public class AbilityWindow : MonoBehaviour {
 
 	//対応する駒の能力説明テキストをセット
 	public TextAsset AbilityText;
-
+	
 	public string ExplainData;
-	public GameObject Sesytem;
+	public GameObject Sesystem;
 
 	public GameObject SelectObj;
 
@@ -19,7 +19,7 @@ public class AbilityWindow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		SelectObj = Sesytem.gameObject.GetComponent<SelectSystem> ().hitobj;
+		SelectObj = Sesystem.gameObject.GetComponent<SelectSystem> ().hitobj;
 		AbilityText = SelectObj.GetComponent<Ability> ().Abtext;
 		ExplainData = AbilityText.text;
 		GetComponent<Text> ().text = ExplainData;
