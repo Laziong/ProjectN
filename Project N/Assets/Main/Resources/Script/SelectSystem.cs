@@ -21,7 +21,7 @@ public class SelectSystem : MonoBehaviour {
 	// Update is called once per frame
  public	void Update () {
 		///白ターンの時
-		if(TurnManager.once == true){
+		if(TurnManager.once == true && TurnManager.whitepoint >= 1){
 		//ユニット選択状態の時
 		if (Input.GetMouseButtonDown (0)) {
 			if (TurnManager.Allselect == true) {
@@ -47,14 +47,14 @@ public class SelectSystem : MonoBehaviour {
 			}
 		}
 		///黒ターンの時
-		if(TurnManager.once == false){
+		if(TurnManager.once == false && TurnManager.blackpoint >= 1){
 			//ユニット選択状態の時
 			if (Input.GetMouseButtonDown (0)) {
 				if (TurnManager.Allselect == true) {
 					//移動メソッド呼び出し
 					if(hitobj.GetComponent<BlackTurn>().enabled == true){
 						hitobj.SendMessage ("NormalMove");
-					}
+					}hitobj.SendMessage("KillMove");
 					
 					//非選択状態の時
 				}else if (TurnManager.Allselect == false) {

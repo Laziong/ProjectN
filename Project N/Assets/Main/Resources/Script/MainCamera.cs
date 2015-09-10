@@ -8,32 +8,34 @@ public class MainCamera : MonoBehaviour {
 	public float radius = 3.0f;
 	public float angle = 0.0f;
 	public float count = 0.0f;
-	bool change;
-	bool Tend;
+	//bool change;
+	public bool Tend;
 	int var;
 	bool random;
 
 	// Use this for initialization
 	void Start () {
-		change = false;
+		//change = false;
+		Tend = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		/*
 		count += 0.2f;
 
 		//右クリックでカウントリセットして自陣視点に戻る
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (1)) {
 			count = 0.0f;
 			//白視点
 			if (change == false && TurnManager.once == true) {
-				this.transform.position = new Vector3 (-0.3f, 3.14f, 6.9f);
-				this.transform.rotation = Quaternion.Euler (33f, 179f, 359f);
+				this.transform.position = new Vector3 (4.2f, 40.0f, 0);
+				this.transform.rotation = Quaternion.Euler (90, 180, 0);
 			} else if
 			//黒視点
 				(change == false && TurnManager.once == false) {
-				this.transform.position = new Vector3 (0.17f, 3.43f, -6.9f);
-				this.transform.rotation = Quaternion.Euler (33f, -1.5f, -1.21f);
+				this.transform.position = new Vector3 (-4.2f, 40.0f, 0f);
+				this.transform.rotation = Quaternion.Euler (90, 0, 0);
 			}
 		}
 
@@ -105,44 +107,20 @@ public class MainCamera : MonoBehaviour {
 			count = 0.0f;
 			random =false;
 		}
+		*/
 
 		//移動完了後カメラの自動切替
-		if (TurnManager.once == false && Tend == false) {
-			change = false;
-			Tend = true;
-		} else if
-			(TurnManager.once == true && Tend == true) {
-			change = false;
-			Tend = false;
-		}
-		if (count <= 100) {
-			if (change == false && TurnManager.once == false) {
-				this.transform.position = new Vector3 (0.17f, 3.43f, -6.01f);
-				this.transform.rotation = Quaternion.Euler (33f, -1.5f, -1.21f);
-			} else if
-			(change == false && TurnManager.once == true) {
-				this.transform.position = new Vector3 (-0.2f, 3.14f, 6.23f);
-				this.transform.rotation = Quaternion.Euler (33f, 179f, 359f);
-			}
-		}
-	}
-
-	//対応ボタンクリックで見上げる視点
-	public void UpCamera(){
-		if (TurnManager.once == true) {
-			this.transform.position = new Vector3 (3.0f, 6.4f, 0.15f);
+		//白視点
+		if (Tend == true && TurnManager.once == true) {
+			this.transform.position = new Vector3 (4.2f, 40.0f, 0);
 			this.transform.rotation = Quaternion.Euler (90, 180, 0);
-			change = true;
+			Tend = false;
 		} else if
-			(TurnManager.once == false) {
-			this.transform.position = new Vector3 (-3.0f, 6.4f, 0.15f);
+			//黒視点
+		(Tend == false && TurnManager.once == false) {
+			this.transform.position = new Vector3 (-4.2f, 40.0f, 0f);
 			this.transform.rotation = Quaternion.Euler (90, 0, 0);
-			change = true;
+			Tend = true;
 		}
-	}
-
-	//対応ボタンクリックで自陣視点
-	public void DownCmaera(){
-		change = false;
 	}
 }

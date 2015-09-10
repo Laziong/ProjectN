@@ -13,6 +13,7 @@ public class ClickHide : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//クリックで視点切り替え
 		if (TurnManager.blackpoint == 0 || TurnManager.whitepoint == 0) {
 			if (this.gameObject.name == "Down") {
 				this.gameObject.SetActive (false);

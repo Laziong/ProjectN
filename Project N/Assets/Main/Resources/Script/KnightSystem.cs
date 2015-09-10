@@ -12,7 +12,9 @@ public class KnightSystem : MonoBehaviour {
 	public bool belong_black;//同上
 	public bool belong;//一回だけ所属決め
 
-	public GameObject hitpoint;
+	public GameObject hitpoint;//通常移動時の選択地点
+
+	bool Pawn_twice;//ポーン２マス用
 
 	[SerializeField, HideInInspector]
 	NavMeshAgent agent;
@@ -31,17 +33,17 @@ public class KnightSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//最初のターン時の所属決め
 	if (GetComponent<WhiteTurn> ().enabled == true && belong == true) {
 			belong_white = true;
 			belong_black = false;
 			belong = false;
-			Debug.Log("whiteOK");
 		}
 	if (GetComponent<BlackTurn> ().enabled == true && belong == true) {
 			belong_white = false;
 			belong_black = true;
 			belong = false;
-			Debug.Log("blackOK");
 		}
 	
 	}
@@ -147,9 +149,9 @@ public class KnightSystem : MonoBehaviour {
 			Vector3 posc = new Vector3 (posx + a, posy - 0.07f, posz - b); //斜め右後
 			Vector3 posd = new Vector3 (posx - a, posy - 0.07f, posz - b); //斜め左後
 			Vector3 pose = new Vector3 (posx + a, posy - 0.07f, posz);     //縦＋移動
-			Vector3 posf = new Vector3 (posx, posy - 0.07f, posz + b); //横＋移動
+			Vector3 posf = new Vector3 (posx, posy - 0.07f, posz + b);     //横＋移動
 			Vector3 posg = new Vector3 (posx - a, posy - 0.07f, posz);     //縦ー移動
-			Vector3 posh = new Vector3 (posx, posy - 0.07f, posz - b); //横ー移動
+			Vector3 posh = new Vector3 (posx, posy - 0.07f, posz - b);     //横ー移動
 			Quaternion rote = new Quaternion (0.0f, 0.0f, 0.0f, 0.0f);
 			Instantiate (mv, posa, rote);//右前
 			Instantiate (mv, posb, rote);//左前
@@ -212,9 +214,9 @@ public class KnightSystem : MonoBehaviour {
 			Vector3 posc = new Vector3 (posx + a, posy - 0.07f, posz - b); //斜め右後
 			Vector3 posd = new Vector3 (posx - a, posy - 0.07f, posz - b); //斜め左後
 			Vector3 pose = new Vector3 (posx + a, posy - 0.07f, posz);     //縦＋移動
-			Vector3 posf = new Vector3 (posx, posy - 0.07f, posz + b); //横＋移動
+			Vector3 posf = new Vector3 (posx, posy - 0.07f, posz + b); 	   //横＋移動
 			Vector3 posg = new Vector3 (posx - a, posy - 0.07f, posz);     //縦ー移動
-			Vector3 posh = new Vector3 (posx, posy - 0.07f, posz - b); //横ー移動
+			Vector3 posh = new Vector3 (posx, posy - 0.07f, posz - b);     //横ー移動
 			Quaternion rote = new Quaternion (0.0f, 0.0f, 0.0f, 0.0f);
 			Instantiate (mv, posa, rote);//右前
 			Instantiate (mv, posb, rote);//左前
@@ -266,13 +268,20 @@ public class KnightSystem : MonoBehaviour {
 		
 		Physics.Raycast (moveray, out movehit);
 		hitpoint = movehit.collider.gameObject;
-		Debug.Log (movehit.point);
 		
 		if (movehit.collider.gameObject.tag == "moveeffect") {
 			if (Physics.Raycast (moveray, out movehit)) {
 				//選択マスへ移動
-				if (this.gameObject.tag == "Assasivn") {
+				if (this.gameObject.tag == "Assasin") {
 					this.transform.position = movehit.transform.position;
+					if(belong_white == true){
+						Invoke("TurnEndWhite",2.0f);
+					}else if 
+					(belong_black == true){
+						Invoke("TurnEndBlack",2.0f);
+					}
+
+					Invoke("Stop",0.2f);
 				} else {
 					agent.SetDestination (movehit.point);
 					//Debug.Log();
@@ -280,8 +289,8 @@ public class KnightSystem : MonoBehaviour {
 					//行動ポイントの消費
 					if(belong_white == true){
 					Invoke("TurnEndWhite",2.0f);
-					}
-					if (belong_black == true){
+					}else if 
+						  (belong_black == true){
 					Invoke("TurnEndBlack",2.0f);
 					}
 
@@ -289,16 +298,39 @@ public class KnightSystem : MonoBehaviour {
 				}
 			}
 		}
-	}
-	//破壊移動メソッド
-	void KillMove(){
+	//破壊移動用
+		//対象が黒駒、自分が白の時
+		if (belong_white == true) {
+			if (hitpoint.gameObject.GetComponent<BlackTurn> ().enabled == true) {
+				Destroy(hitpoint);
+				if (this.gameObject.tag == "Assasin") {
+					this.transform.position = movehit.transform.position;
+				}else{
+					agent.SetDestination(movehit.point);
+				}
+				Invoke("TurnEndWhite",2.0f);
+				Invoke("Stop",0.9f);
+			}
+		}
+		
+		//対象が白駒、自分が黒の時
+		if (belong_black == true) {
+			if (hitpoint.gameObject.GetComponent<WhiteTurn> ().enabled == true) {
+				Destroy(hitpoint);
+				if (this.gameObject.tag == "Assasin") {
+					this.transform.position = movehit.transform.position;
+				}else{
+					agent.SetDestination(movehit.point);
+				}
+				Invoke("TurnEndBlack",2.0f);
+				Invoke("Stop",0.9f);
+			}
+		}
 	}
 
 	//動作ストップ
 	void Stop(){
 		animator.SetFloat ("Speed", 0.0f);
-	//非選択状態
-		TurnManager.Allselect = false;
 	}
 
 	//ターンエンド
@@ -306,11 +338,13 @@ public class KnightSystem : MonoBehaviour {
 		GetComponent<WhiteTurn> ().twice = true;
 		TurnManager.once = false;
 		TurnManager.whitepoint = 0;
+		TurnManager.Allselect = false;
 	}
 	void TurnEndBlack(){
 		GetComponent<BlackTurn> ().twice = true;
 		TurnManager.once = true;
 		TurnManager.blackpoint = 0;
+		TurnManager.Allselect = false;
 	}
 	void DeadEndWhite(){
 	}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TurnManager : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class TurnManager : MonoBehaviour {
 	//経過ターン
 	//ターン数
 	public static int turn;
-	//一回実行用
+	//Trueなら白ターン：Falseで黒ターン
 	public static bool once;
 
 
@@ -26,6 +27,9 @@ public class TurnManager : MonoBehaviour {
 		Allselect = false;
 
 	}
+
+	void Start(){
+	}
 	
 	// Update is called once per frame
     public void Update () {
@@ -35,5 +39,6 @@ public class TurnManager : MonoBehaviour {
 			whitepoint = 1;
 			turn++;
 		}
+		this.GetComponent<Text> ().text = "ターン：" + turn.ToString ();
 	}
 }
