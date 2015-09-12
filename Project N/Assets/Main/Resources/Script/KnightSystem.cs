@@ -5,6 +5,8 @@ using System.Collections;
 public class KnightSystem : MonoBehaviour {
 	
 	public GameObject mv;//移動範囲表示用オブジェクト
+	public bool MoveStopCell;//移動範囲マスの表示停止用
+
 	public GameObject SeSystem;//選択システム
  	public GameObject inobj;//自オブジェクト
 
@@ -15,6 +17,7 @@ public class KnightSystem : MonoBehaviour {
 	public GameObject hitpoint;//通常移動時の選択地点
 
 	bool Pawn_twice;//ポーン２マス用
+
 
 	[SerializeField, HideInInspector]
 	NavMeshAgent agent;
@@ -34,6 +37,7 @@ public class KnightSystem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 		//最初のターン時の所属決め
 	if (GetComponent<WhiteTurn> ().enabled == true && belong == true) {
 			belong_white = true;
@@ -44,6 +48,13 @@ public class KnightSystem : MonoBehaviour {
 			belong_white = false;
 			belong_black = true;
 			belong = false;
+		}
+
+		if (belong_white == true) {
+			MoveStopCell = mv.GetComponent<Edestroy> ().hitfriendW;
+		} else if
+			(belong_black == true) {
+			MoveStopCell = mv.GetComponent<Edestroy2>().hitfriendB;
 		}
 	
 	}
@@ -98,8 +109,8 @@ public class KnightSystem : MonoBehaviour {
 			a++;//縦マス
 			b++;//横マス
 			i++;//マス数
+			}
 		}
-	}
 	void Assasin(){
 		//選択状態
 		TurnManager.Allselect = true;
@@ -176,9 +187,9 @@ public class KnightSystem : MonoBehaviour {
 		
 		int i = 0, a = 0, b = 0;
 		//縦1マス分移動範囲表示
-		while (i<2) {
+		while (i<1) {
 			if (belong_white == true) {
-				Vector3 posa = new Vector3 (posx, posy - 0.07f, posz - a);     //縦＋移動
+				Vector3 posa = new Vector3 (posx, posy - 0.07f, posz - a - 1);     //縦＋移動
 				Quaternion rote = new Quaternion (0.0f, 0.0f, 0.0f, 0.0f);
 				Instantiate (mv, posa, rote);//縦＋
 				
@@ -187,7 +198,7 @@ public class KnightSystem : MonoBehaviour {
 				i++;//マス数
 			} else if
 				(belong_black == true) {
-				Vector3 posa = new Vector3 (posx, posy - 0.07f, posz + a);
+				Vector3 posa = new Vector3 (posx, posy - 0.07f, posz + a + 1);
 			
 			Quaternion rote = new Quaternion (0.0f, 0.0f, 0.0f, 0.0f);
 			Instantiate (mv, posa, rote);//縦＋

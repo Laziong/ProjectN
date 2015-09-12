@@ -32,8 +32,9 @@ public class AbilityTitle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		SelectObjName = Sesystem.gameObject.GetComponent<SelectSystem> ().hitobj.gameObject.name;
-		
+		if (TurnManager.Allselect == true) {
+			SelectObjName = Sesystem.gameObject.GetComponent<SelectSystem> ().hitobj.gameObject.name;
+		}
 		if (TurnManager.Allselect == true) {
 			for (i = 0; ADB_ObjName != SelectObjName; ++i) {
 				ADB_ObjName = database.ability [i].ObjectName;

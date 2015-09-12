@@ -25,10 +25,12 @@ public class TurnManager : MonoBehaviour {
 		turn = 1;//開始ターン
 		once = true;
 		Allselect = false;
+		this.GetComponent<Text> ().text = "ターン：" + turn.ToString ();
 
 	}
 
 	void Start(){
+
 	}
 	
 	// Update is called once per frame
@@ -38,7 +40,7 @@ public class TurnManager : MonoBehaviour {
 			blackpoint = 1;
 			whitepoint = 1;
 			turn++;
+			this.GetComponent<Text> ().text = "ターン：" + turn.ToString ();
 		}
-		this.GetComponent<Text> ().text = "ターン：" + turn.ToString ();
 	}
 }

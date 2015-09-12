@@ -24,6 +24,10 @@ public class AbilityWindow : MonoBehaviour {
 	public TextAsset ADB_AbilityText;
 	public string ADB_ExplainData;
 
+	//アビリティポイント
+	public static int AbilityPointWhite;
+	public static int AbilityPointBlack;
+
 
 	// Use this for initialization
 	void Start () {
@@ -32,8 +36,9 @@ public class AbilityWindow : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		SelectObjName = Sesystem.gameObject.GetComponent<SelectSystem> ().hitobj.gameObject.name;
-
+		if (TurnManager.Allselect == true) {
+			SelectObjName = Sesystem.gameObject.GetComponent<SelectSystem> ().hitobj.gameObject.name;
+		}
 		if (TurnManager.Allselect == true) {
 			for (i = 0; ADB_ObjName != SelectObjName; ++i) {
 				ADB_ObjName = database.ability [i].ObjectName;

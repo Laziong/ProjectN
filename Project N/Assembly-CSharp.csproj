@@ -46,18 +46,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Main\Resources\Ability\AbilityActive.cs" />
      <Compile Include="Assets\Main\Resources\Ability\AbilityDataBase.cs" />
      <Compile Include="Assets\Main\Resources\Ability\AbilityTitle.cs" />
+     <Compile Include="Assets\Main\Resources\Ability\AbilityWindow.cs" />
      <Compile Include="Assets\Main\Resources\Ability\List\Ability.cs" />
-     <Compile Include="Assets\Main\Resources\Ability\Windowchange.cs" />
-     <Compile Include="Assets\Main\Resources\Script\AbilityWindow.cs" />
+     <Compile Include="Assets\Main\Resources\Ability\List\AbilityBox\AllAbility.cs" />
+     <Compile Include="Assets\Main\Resources\Ability\List\AbilityBox\test.cs" />
      <Compile Include="Assets\Main\Resources\Script\BlackTurn.cs" />
      <Compile Include="Assets\Main\Resources\Script\ClickHide.cs" />
+     <Compile Include="Assets\Main\Resources\Script\CopyObject.cs" />
      <Compile Include="Assets\Main\Resources\Script\Edestroy.cs" />
      <Compile Include="Assets\Main\Resources\Script\Edestroy2.cs" />
      <Compile Include="Assets\Main\Resources\Script\EffectPosition.cs" />
      <Compile Include="Assets\Main\Resources\Script\KnightSystem.cs" />
      <Compile Include="Assets\Main\Resources\Script\MainCamera.cs" />
+     <Compile Include="Assets\Main\Resources\Script\NearCamera.cs" />
      <Compile Include="Assets\Main\Resources\Script\SelectSystem.cs" />
      <Compile Include="Assets\Main\Resources\Script\TurnManager.cs" />
      <Compile Include="Assets\Main\Resources\Script\WhiteTurn.cs" />
