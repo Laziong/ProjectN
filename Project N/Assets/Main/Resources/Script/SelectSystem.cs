@@ -54,7 +54,7 @@ public class SelectSystem : MonoBehaviour {
 					//移動メソッド呼び出し
 					if(hitobj.GetComponent<BlackTurn>().enabled == true){
 						hitobj.SendMessage ("NormalMove");
-					}hitobj.SendMessage("KillMove");
+					}
 					
 					//非選択状態の時
 				}else if (TurnManager.Allselect == false) {

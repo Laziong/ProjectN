@@ -22,7 +22,6 @@ public class Edestroy : MonoBehaviour {
 		}
 	}
 	void OnTriggerStay(Collider collision){
-
 		if (collision.gameObject.tag == "cell") {
 			hitfriendW = false;
 			collision.gameObject.GetComponent<Renderer> ().material.color = Color.yellow;
