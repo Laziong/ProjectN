@@ -1,3 +1,33 @@
+<<<<<<< HEAD
 Base path: C:/Program Files/Unity/Editor/Data
 Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-8764
 Cmd: getPlatforms
+=======
+Base path: /Applications/Unity/Unity.app/Contents
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-1927570192
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=0 type=0 insize=794 outsize=2511 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=794 outsize=6 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=619 outsize=4212 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=619 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1004 outsize=2769 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1004 outsize=6 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=631 outsize=4548 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=631 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1106 outsize=634 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1106 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1109 outsize=634 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1109 outsize=6 kw= ok=1
+>>>>>>> 9aeda1a69bf7a067fda6beee1c6146ff81e1fc6a
