@@ -357,8 +357,4 @@ public class KnightSystem : MonoBehaviour {
 		TurnManager.blackpoint = 0;
 		TurnManager.Allselect = false;
 	}
-	void DeadEndWhite(){
-	}
-	void DeadEndBlack(){
-	}
 }

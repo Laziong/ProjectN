@@ -24,6 +24,15 @@ public class AllAbility : MonoBehaviour {
 	}
 	
 	public void QueenWhite(){
-		Debug.Log("testAB");
+		Debug.Log ("testAB");
+		if (ABManager.WhiteABP <= 4 || ABManager.BlackABP <= 4) {
+			Debug.Log ("testFalse");
+		} else if (TurnManager.once == true) {
+			TurnManager.WhiteABCount -= 1;
+			ABManager.WhiteABP -= 5;
+		} else if (TurnManager.once == false) {
+			TurnManager.BlackABCount -= 1;
+			ABManager.BlackABP -= 5;
+		}
 	}
 }
